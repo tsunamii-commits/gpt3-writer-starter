@@ -1,6 +1,7 @@
 import Head from 'next/head';
 import Image from 'next/image';
 import buildspaceLogo from '../assets/buildspace-logo.png';
+import wendyLogo from '../assets/wendy-logo.png';
 import { useState } from 'react';
 
 const Home = () => {
@@ -36,11 +37,14 @@ const onUserChangedText = (event) => {
   return (
     <div className="root">
       <Head>
-        <title>GPT-3 Writer | buildspace</title>
+        <title>Tsunami's GPT-3 Writer | buildspace</title>
       </Head>
       <div className="container">
         <div className="header">
           <div className="header-title">
+          <div className="logo">
+            <Image src={wendyLogo} alt="Logo" width={150} height={150} />
+          </div>
             <h1>wendy's birthday message generator</h1>
           </div>
           <div className="header-subtitle">
@@ -71,7 +75,7 @@ const onUserChangedText = (event) => {
   <div className="output">
     <div className="output-header-container">
       <div className="output-header">
-        <h3>{userInput} says:</h3>
+        <h3>Wendy's birthday message from {userInput}: </h3>
       </div>
     </div>
     <div className="output-content">
